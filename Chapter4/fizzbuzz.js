@@ -6,7 +6,7 @@ var main = function (){
 
 	var displayRes = function(index){
 
-		$("body").append(" " + index + '<br>');
+		$("body").append(" " + index + " ");
 	};
 
 	var fizzBuzz = function(num1,num2){
