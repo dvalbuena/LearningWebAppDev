@@ -8,10 +8,10 @@ var main = function (){
 		$("body").append(" " + index + " ");
 	};
 
-	var fizzBuzz = function(num1,num2){
+	var fizzBuzz = function(index){
 		var index;
 		/*for loop that iterates to 100*/
-		for(index = num1; index <= num2; index++){
+		
 			if(index%15 === 0){
 				displayRes("fizzbuzz");
 			}else if (index%3 === 0){
@@ -22,7 +22,7 @@ var main = function (){
 				displayRes(index);
 			}
 			
-		}
+		
 	};
 
 	var fizzBuzz_1 = function(){
@@ -31,15 +31,19 @@ var main = function (){
 		$("body").append($newHeader);
 		var start = 1;
 		var end = 100;
-		fizzBuzz(start,end);
+		var index;
+		for (index = start; index <= end; index++)
+		fizzBuzz(index);
 	};
 	
 	var fizzBuzz_2 = function(start,end){
 		$newHeader = $("<h1>").text("fizzBuzz_2");
 
 		$("body").append($newHeader);
-		displayRes("fizzBuzz_1");
-		fizzBuzz(start,end);
+		//displayRes("fizzBuzz_1");
+		var index;
+		for (index = start; index <= end; index++)
+		fizzBuzz(index);
 	};
 
 	var fizzBuzz_3 = function(arr){
@@ -48,7 +52,10 @@ var main = function (){
 
 		$("body").append($newHeader);
 		var length = arr.length;
-		fizzBuzz(arr[0],arr[length - 1]);
+		//fizzBuzz(arr[0],arr[length - 1]);
+		arr.forEach(function(element){
+			fizzBuzz(element);
+		});
 		
 	};
 
