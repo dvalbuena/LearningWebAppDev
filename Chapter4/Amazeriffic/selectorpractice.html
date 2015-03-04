@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- <link href="stylesheets/reset.css" rel="stylesheet" type="text/css">-->
+    <!--<link href="stylesheets/style.css" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" href="stylesheets/colorbox.css">
+    <script src = "http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src = "javascripts/jquery.colorbox-min.js"></script>
+    <!-- This script makes the images display slideshow when the photo link is clicked-->
+    <script>      
+      jQuery(document).ready(function(){
+        jQuery('a.slideshow').colorbox({opacity:0.5,rel:'group1',slideshow:true});
+      });
+    </script>
+  </head>
+
+  <body>
+
+   <p><a href ='AmazerifficScreenShot1.png' class = "slideshow" title="image 1">photo_1</a></p>
+   <p><a href ='AmazerifficScreenShot2.png' class = "slideshow" title="image 2">photo_2</a></p>
+   <p><a href ='AmazerifficScreenShot3.png' class = "slideshow" title="image 3">photo_3</a></p>
+   <p><a href ='AmazerifficScreenShot4.png' class = "slideshow" title="image 4">photo_4</a></p>
+        
+
+
+  </body>
+</html>

@@ -2,7 +2,6 @@ var main = function (){
 	"use strict";
 	
 	var $newHeader;
-	var $newParagraph = $("<p>");
 
 	var displayRes = function(index){
 
