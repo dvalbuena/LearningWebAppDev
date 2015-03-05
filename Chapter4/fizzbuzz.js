@@ -1,3 +1,8 @@
+// Client-side code
+/* jshint browser: true, jquery: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, nonew: true, quotmark: double, strict: true, undef: true, unused: true */
+
+// Server-side code
+/* jshint node: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, nonew: true, quotmark: double, strict: true, undef: true, unused: true */
 var main = function (){
 	"use strict";
 	
@@ -9,15 +14,17 @@ var main = function (){
 	};
 
 	var fizzBuzz = function(index){
-		var index;
-		/*for loop that iterates to 100*/
-		
+
+		//check which category the number belongs to
 			if(index%15 === 0){
+				//if multiple of 3 and 5 print fizzbuzz
 				displayRes("fizzbuzz");
 			}else if (index%3 === 0){
-				displayRes("fizz");;
+				//if multiple of 3 print fizz
+				displayRes("fizz");
 			}else if (index%5 === 0){
-				displayRes("buzz");;
+				//if multiple of 5 print buzz
+				displayRes("buzz");
 			}else{
 				displayRes(index);
 			}
@@ -25,6 +32,7 @@ var main = function (){
 		
 	};
 
+	//function that feeds 1-100 numbers to the fizzbuzz function
 	var fizzBuzz_1 = function(){
 		$newHeader = $("<h1>").text("fizzBuzz_1");
 
@@ -32,33 +40,39 @@ var main = function (){
 		var start = 1;
 		var end = 100;
 		var index;
-		for (index = start; index <= end; index++)
+		for (index = start; index <= end; index++){
 		fizzBuzz(index);
+		}
 	};
 	
+	//fizzbuzz function that takes starting and ending number
+	//of parameters
 	var fizzBuzz_2 = function(start,end){
 		$newHeader = $("<h1>").text("fizzBuzz_2");
 
 		$("body").append($newHeader);
 		//displayRes("fizzBuzz_1");
 		var index;
-		for (index = start; index <= end; index++)
+		for (index = start; index <= end; index++){
 		fizzBuzz(index);
+		}
 	};
 
+	//function fizzbuzz that takes an array of numbers to use
+	//instead of counting by itself.
 	var fizzBuzz_3 = function(arr){
 		
 		$newHeader = $("<h1>").text("fizzBuzz_3");
 
 		$("body").append($newHeader);
-		var length = arr.length;
-		//fizzBuzz(arr[0],arr[length - 1]);
 		arr.forEach(function(element){
 			fizzBuzz(element);
 		});
 		
 	};
 
+	//function fizzbuzz that takes an object specificying words
+	//to be printed instead of Fizz and Buzz
 	var fizzBuzz_4 = function(obj){
 		$newHeader = $("<h1>").text("fizzBuzz_4");
 
@@ -77,9 +91,10 @@ var main = function (){
 			}else{
 				displayRes(index);
 			}
-		};
+		}
 	};
 
+	//the function that combines fizzbuzz_3 and fizzbuzz_4
 	var fizzBuzz_5 = function(arr, obj){
 		$newHeader = $("<h1>").text("fizzBuzz_5");
 
