@@ -1,4 +1,6 @@
 var main = function () {
+    "use strict";
+
     var toDos = ["Get groceries",
                  "Make up some new ToDos",
                  "Prep for Monday's class",
@@ -14,6 +16,11 @@ var main = function () {
             var $content,
                 $input,
                 $button,
+                $image1,
+                $image2,
+                $image3,
+                $image4,
+                $imageshow,
                 i;
 
             $(".tabs a span").removeClass("active");
@@ -45,9 +52,24 @@ var main = function () {
                     }
                 });
 
+
                 $content = $("<div>").append($input).append($button);
                /* Alternatively append() allows multiple arguments so the above
                 can be done with $content = $("<div>").append($input, $button); */
+            } else if ($element.parent().is(":nth-child(4)")){
+                $imageshow = $("<script>");
+                $imageshow.text("jQuery('a.slideshow').colorbox({opacity:0.5,rel:'group1',slideshow:true});");
+              
+                $image1 = $("<p><a href ='AmazerifficScreenShot1.png' class = 'slideshow' title='image 1'>photo_1</a></p>");
+                $image2 = $("<p><a href ='AmazerifficScreenShot2.png' class = 'slideshow' title='image 2'>photo_2</a></p>");
+                $image3 = $("<p><a href ='AmazerifficScreenShot3.png' class = 'slideshow' title='image 3'>photo_3</a></p>");
+                $image4 = $("<p><a href ='AmazerifficScreenShot4.png' class = 'slideshow' title='image 4'>photo_4</a></p>");
+
+                //$content = $("<ul>").append($image1,$image2,$image3,$image4,$imageshow);
+                $content = $("<ul>").append($("<p><a href ='AmazerifficScreenShot1.png' class = 'slideshow' title='image 1'>photo_1</a></p>"),
+                    $("<p><a href ='AmazerifficScreenShot2.png' class = 'slideshow' title='image 2'>photo_2</a></p>"),
+                    $("<p><a href ='AmazerifficScreenShot3.png' class = 'slideshow' title='image 3'>photo_3</a></p>"),
+                    $("<p><a href ='AmazerifficScreenShot4.png' class = 'slideshow' title='image 4'>photo_4</a></p>"),$imageshow);
             }
 
             $("main .content").append($content);
