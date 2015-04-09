@@ -1,0 +1,9 @@
+{
+	"name": "ch7",
+	"description": "user enter link and it is shortened",
+	"dependencies": {
+		"redis":"0.8.x",
+		"express":"~4.12.2",
+		"body-parser":"~1.12.0"
+	}
+}
